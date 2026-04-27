@@ -1,29 +1,30 @@
 # Base configs
-baseurl: "https://photography.rampatra.com"
+baseurl: ""
 # baseurl: "" # Comment the above line and uncomment this to test the website locally
 image_fulls_loc: "/images/fulls"
 image_thumbs_loc: "/images/thumbs"
 google_analytics: "UA-46465113-2"
 
 # UI configs
-title: "Photography by Ram Patra"
+title: "Portfolio by Andrew Gong"
 subtitle: "See the world through my eyes!"
-author: "Ram Patra"
+author: "Andrew Gong"
 header:
- title: "Photography"
- subtitle: "by Ram Patra"
+ title: "Portfolio"
+ subtitle: "by Andrew Gong"
 footer:
- name: "Hey there, my name is Ram"
- bio: "I am a software developer and a tech aficionado. Love making teeny tiny apps solving tiny problems in life and now learning photography."
- github: "Want a website like this for yourself for free? Just <a href=\"https://github.com/rampatra/photography\">fork this repo on github</a> ;)"
-web_design: "AJ"
+ name: "Andrew Gong"
+ bio: "I am a software developer and 3D animator currently studying Computer Science and Fine Arts (Animation & Moving Image) at the University of New South Wales. I specialise in combining technical and creative disciplines, with experience developing 3D applications using C++, DirectX, and Unreal Engine, alongside creating animation and assets in Maya and ZBrush."
+ skills: "My background in graphics programming and computer graphics has given me a strong understanding of scripting and technical animation."
+ awards: "As a two-time UNSW ADA Dean’s List recipient, I am driven by curiosity, a strong work ethic, and a commitment to continuous improvement."
+web_design: "Andrew Gong"
 
 social_urls:
   twitter: "https://www.twitter.com/rampatra_"
   instagram: "https://www.instagram.com/ram_patra"
   dribbble: "https://dribbble.com/rampatra"
-  linkedin: "https://in.linkedin.com/in/ram-patra"
-  github: "https://www.github.com/rampatra"
+  linkedin: "https://www.linkedin.com/in/andrew-gong-17a059318/"
+  github: "https://github.com/Kidudeman"
 
 # Configure which exif data to display
 # Tag is the actual exif tag, icon is a fontawesome icon. Use JSON notation without line breaks
