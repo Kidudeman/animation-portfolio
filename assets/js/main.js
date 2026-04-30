@@ -207,7 +207,6 @@
 	$main.poptrox({
 	  baseZIndex: 20000,
 	  caption: function ($a) {
-		if ($a.data('type') === 'video') return '';
 		var $image_img = $a.children('img');
 		var data = exifDatas[$image_img.data('name')];
 		if (data === undefined) {
@@ -240,8 +239,7 @@
 	  usePopupNav: true,
 	  windowMargin: 50,
 	});
-
-
+  
 	// Hack: Set margins to 0 when 'xsmall' activates.
 	breakpoints.on("<=xsmall", function () {
 	  $main[0]._poptrox.windowMargin = 0;
