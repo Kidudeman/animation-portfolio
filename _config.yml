@@ -8,28 +8,19 @@ media:
   - type: youtube
     url: https://youtu.be/Py9T5tPc6Ow
   - type: youtube
-    url: https://youtu.be/Fr2807MvBHA
-    title: "Lip Sync & Emotional Performance"
-    date: "19 July 2025"
-    role: "Individual Project"
-    # description: >
-    #   This animation is based on the iconic “I’m as mad as hell” speech from *Network (1976)*,
-    #   in which news anchor Howard Beale delivers a passionate on-air breakdown, urging viewers
-    #   to reject societal complacency.
-    # credits:
-    #   - "Audio: Scene from Network (1976)"
-    #   - "Rig: Malcolm 2.0 by AnimSchool https://store.animschool.edu/product/malcolm-2-0-2/"
-
+    url: https://youtu.be/qzXHRQ69_m0
   - type: youtube
-    url: https://youtu.be/BtX953SqPZM
-  - type: youtube
-    url: https://youtu.be/BeCh_Mb8BeQ
+    url: https://youtu.be/Q5mPHiKrljk
   - type: youtube
     url: https://youtu.be/EcxJp-UTuqY
   - type: youtube
     url: https://youtu.be/CPM08N48te0
   - type: youtube
-    url: https://youtu.be/ik4Q4zwglyc
+    url: https://youtu.be/Fr2807MvBHA
+  - type: youtube
+    url: https://youtu.be/BtX953SqPZM
+  - type: youtube
+    url: https://youtu.be/RDYYbi0gFsI
 
 google_analytics: "UA-46465113-2"
 
@@ -48,9 +39,7 @@ footer:
 web_design: "Andrew Gong"
 
 social_urls:
-  twitter: "https://www.twitter.com/rampatra_"
-  instagram: "https://www.instagram.com/ram_patra"
-  dribbble: "https://dribbble.com/rampatra"
+  instagram: "https://www.instagram.com/andrew_x_gong/"
   linkedin: "https://www.linkedin.com/in/andrew-gong-17a059318/"
   github: "https://github.com/Kidudeman"
 

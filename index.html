@@ -2,15 +2,37 @@
 layout: default
 ---
 
-<!-- Wrapper -->
 <div id="wrapper">
 
     <!-- Header -->
     <header id="header">
-        <h1><a href="index.html"><strong>{{ site.header.title }}</strong> {{ site.header.subtitle }}</a></h1>
+        <h1>
+            <a href="index.html">
+                <strong>{{ site.header.title }}</strong> {{ site.header.subtitle }}
+            </a>
+        </h1>
         <nav>
             <ul>
-                <li><a href="#footer">About&nbsp;&nbsp;<i class="fa fa-info-circle text-fg"></i></a></li>
+                <li>
+                    <a href="#footer" onclick="showAbout()" class="icon solid fa-user">
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a href="#footer" onclick="showContact()" class="icon solid fa-envelope">
+                        Contact
+                    </a>
+                </li>
+                <li>
+                    <a href="assets/resume.pdf" download class="icon solid fa-file">
+                        Resume
+                    </a>
+                </li>
+                <li>
+                    <a href="https://youtu.be/DZOiaCvzeVQ" target="_blank" class="icon solid fa-play">
+                        Showreel
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -20,92 +42,76 @@ layout: default
         {% for item in site.media %}
         {% assign video_id = item.url | split: '/' | last %}
         <article class="thumb">
-            <a href="{{ item.url }}"
-            class="image"
-            data-type="youtube"
-            data-date="{{ item.date }}"
-            data-role="{{ item.role }}">
-            
+            <a href="{{ item.url }}" class="image" data-type="youtube"
+               data-date="{{ item.date }}" data-role="{{ item.role }}">
                 <img src="https://img.youtube.com/vi/{{ video_id }}/maxresdefault.jpg" alt="">
-                
             </a>
         </article>
         {% endfor %}
     </div>
 
-    <!-- Footer -->
+    <!-- Footer Panel -->
     <footer id="footer" class="panel">
-        <div class="inner split">
+        <div class="inner">
+
+            <!-- LEFT SIDE -->
             <div>
-                <section>
+
+                <!-- ABOUT SECTION (default visible) -->
+                <section id="about-section">
                     <h2>{{ site.footer.name }}</h2>
                     <p>{{ site.footer.bio }}</p>
                     <p>{{ site.footer.skills }}</p>
                     <p>{{ site.footer.awards }}</p>
                 </section>
+
+                <!-- SOCIALS (shared) -->
                 <section>
                     <ul class="icons">
-                        {% if site.social_urls.facebook %}
-                            <li>
-                                <a href="{{ site.social_urls.facebook }}" class="icon brands fa-facebook">
-                                    <span class="label">Facebook</span>
-                                </a>
-                            </li>
-                        {% endif %}
-                        {% if site.social_urls.twitter %}
-                            <li>
-                                <a href="{{ site.social_urls.twitter }}" class="icon brands fa-twitter">
-                                    <span class="label">Twitter</span>
-                                </a>
-                            </li>
-                        {% endif %}
                         {% if site.social_urls.instagram %}
-                            <li>
-                                <a href="{{ site.social_urls.instagram }}" class="icon brands fa-instagram">
-                                    <span class="label">Instagram</span>
-                                </a>
-                            </li>
+                        <li>
+                            <a href="{{ site.social_urls.instagram }}" class="icon brands fa-instagram">
+                                <span class="label">Instagram</span>
+                            </a>
+                        </li>
                         {% endif %}
-                        {% if site.social_urls.dribbble %}
-                            <li>
-                                <a href="{{ site.social_urls.dribbble }}" class="icon brands fa-dribbble">
-                                    <span class="label">Dribbble</span>
-                                </a>
-                            </li>
-                        {% endif %}
+
                         {% if site.social_urls.github %}
-                            <li>
-                                <a href="{{ site.social_urls.github }}" class="icon brands fa-github">
-                                    <span class="label">GitHub</span>
-                                </a>
-                            </li>
+                        <li>
+                            <a href="{{ site.social_urls.github }}" class="icon brands fa-github">
+                                <span class="label">GitHub</span>
+                            </a>
+                        </li>
                         {% endif %}
+
                         {% if site.social_urls.linkedin %}
-                            <li>
-                                <a href="{{ site.social_urls.linkedin }}" class="icon brands fa-linkedin">
-                                    <span class="label">LinkedIn</span>
-                                </a>
-                            </li>
+                        <li>
+                            <a href="{{ site.social_urls.linkedin }}" class="icon brands fa-linkedin">
+                                <span class="label">LinkedIn</span>
+                            </a>
+                        </li>
                         {% endif %}
                     </ul>
                 </section>
-                <!-- <p class="copyright">
-                    &copy; {{ site.author }}. Design: {{ site.web_design }}
-                </p> -->
+
             </div>
+
+            <!-- RIGHT SIDE -->
             <div>
-                <section>
+
+                <!-- CONTACT SECTION (hidden by default) -->
+                <section id="contact-section" style="display: none;">
                     <h2>Get in touch</h2>
                     <form method="post" action="#">
                         <div class="fields">
                             <div class="field half">
-                                <input type="text" name="name" id="name" placeholder="Name" />
+                                <input type="text" name="name" placeholder="Name" />
                             </div>
                             <div class="field half">
-                                <input type="text" name="email" id="email" placeholder="Email" />
+                                <input type="email" name="email" placeholder="Email" />
                             </div>
                             <div class="field">
-                                <textarea name="message" id="message" rows="4" placeholder="Message"></textarea>
+                                <textarea name="message" rows="4" placeholder="Message"></textarea>
                             </div>
                         </div>
                         <ul class="actions">
@@ -114,8 +120,23 @@ layout: default
                         </ul>
                     </form>
                 </section>
+
             </div>
+
         </div>
     </footer>
+
 </div>
 
+<!-- Toggle Script -->
+<script>
+function showAbout() {
+    document.getElementById('about-section').style.display = 'block';
+    document.getElementById('contact-section').style.display = 'none';
+}
+
+function showContact() {
+    document.getElementById('about-section').style.display = 'none';
+    document.getElementById('contact-section').style.display = 'block';
+}
+</script>
